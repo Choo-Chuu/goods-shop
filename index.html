@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>굿즈샵</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header id="nav"></header>
+  <main>
+    <h1>굿즈 상품</h1>
+    <p class="sub">마음에 드는 굿즈를 골라보세요. (토스 테스트 결제라서 실제 돈은 나가지 않아요)</p>
+    <div id="msg" class="msg error"></div>
+    <div id="products" class="grid"><div class="empty">상품을 불러오는 중...</div></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

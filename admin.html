@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>관리자 · 굿즈샵</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header id="nav"></header>
+  <main>
+    <h1>관리자: 전체 결제내역</h1>
+    <p class="sub">모든 회원의 주문과 결제 상태를 볼 수 있어요.</p>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="이메일, 상품명, 주문번호로 검색" />
+      <select id="status">
+        <option value="">전체 상태</option>
+        <option value="paid">결제완료</option>
+        <option value="pending">결제 미완료</option>
+        <option value="failed">결제실패</option>
+      </select>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>주문일시</th><th>회원 이메일</th><th>상품</th><th>수량</th><th class="num">금액</th><th>상태</th><th>결제수단</th><th>주문번호</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="8" class="empty">불러오는 중...</td></tr></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
